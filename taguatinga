@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola Classe 19 de Taguatinga - Portal Oficial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-school-blue { background-color: #00AEEF; }
+        .bg-school-green { background-color: #7BC043; }
+        .text-school-blue { color: #00AEEF; }
+        .text-school-green { color: #7BC043; }
+        .tab-active { border-bottom: 4px solid #7BC043; color: #7BC043; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #7BC043; border-radius: 10px; }
+        
+        /* Estilização para o diagrama do estacionamento */
+        .parking-car { width: 24px; height: 40px; border-radius: 4px; position: relative; }
+        .car-window { width: 18px; height: 12px; background: rgba(255,255,255,0.3); margin: 4px auto; border-radius: 2px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full border-2 border-school-blue">
+                   <svg viewBox="0 0 100 100" class="w-10 h-10">
+                       <path d="M20,80 Q50,20 80,80" fill="none" stroke="#00AEEF" stroke-width="8"/>
+                       <circle cx="50" cy="30" r="10" fill="#7BC043"/>
+                       <circle cx="70" cy="55" r="7" fill="#7BC043"/>
+                   </svg>
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl leading-tight">EC 19 <span class="text-school-blue">Taguatinga</span></h1>
+                    <p class="text-xs uppercase tracking-widest text-gray-500 font-semibold">Educação Integral</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-6 font-medium text-sm">
+                <a href="#inicio" class="hover:text-school-blue transition">Início</a>
+                <a href="#historia" class="hover:text-school-blue transition">História</a>
+                <a href="#equipe" class="hover:text-school-blue transition">Equipe</a>
+                <a href="#pedagogico" class="hover:text-school-blue transition">Pedagógico</a>
+                <a href="#curricular" class="hover:text-school-blue transition">Currículo</a>
+                <a href="#calendario" class="hover:text-school-blue transition">Calendário</a>
+                <a href="#contatos" class="hover:text-school-blue transition">Contatos</a>
+            </nav>
+            <button class="md:hidden text-2xl" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white border-t md:hidden flex flex-col p-4 space-y-3 shadow-lg">
+            <a href="#inicio" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Início</a>
+            <a href="#historia" onclick="document.getElementById('mobile-menu').classList.add('hidden')">História</a>
+            <a href="#equipe" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Equipe</a>
+            <a href="#pedagogico" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Pedagógico</a>
+            <a href="#curricular" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Currículo</a>
+            <a href="#calendario" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Calendário</a>
+            <a href="#contatos" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contatos</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-school-blue py-20 text-white overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Educação Integral, Inclusiva e de Excelência</h2>
+                <p class="text-lg mb-8 opacity-90">Construindo saberes, valores e vínculos na comunidade de Taguatinga. Há 62 anos transformando vidas através do ensino público de qualidade.</p>
+                <div class="flex space-x-4">
+                    <a href="#historia" class="bg-white text-school-blue px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Conheça Nossa Escola</a>
+                    <a href="#contatos" class="bg-school-green text-white px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute right-0 bottom-0 opacity-20 transform translate-y-1/4 translate-x-1/4">
+             <svg width="600" height="600" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="80" fill="white" />
+             </svg>
+        </div>
+    </section>
+
+    <!-- Equipe Section -->
+    <section id="equipe" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Estrutura Organizacional</h2>
+                <p class="text-gray-500">Gestão Democrática (2024 – 2027)</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-school-blue shadow-sm">
+                    <h3 class="font-bold text-lg mb-4 text-school-blue"><i class="fas fa-user-tie mr-2"></i>Direção</h3>
+                    <ul class="space-y-2">
+                        <li><strong>Diretora:</strong> Thaís Andrade Macedo</li>
+                        <li><strong>Vice-Diretora:</strong> Edna Calasans Teles</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-school-green shadow-sm">
+                    <h3 class="font-bold text-lg mb-4 text-school-green"><i class="fas fa-file-signature mr-2"></i>Secretaria</h3>
+                    <ul class="space-y-2">
+                        <li><strong>Chefe de Secretaria:</strong> Nília Raquel de Oliveira</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-orange-400 shadow-sm">
+                    <h3 class="font-bold text-lg mb-4 text-orange-400"><i class="fas fa-users-cog mr-2"></i>Supervisores</h3>
+                    <ul class="space-y-2">
+                        <li><strong>Administrativo:</strong> Ewerson Vinicius M. Macedo</li>
+                        <li><strong>Pedagógico:</strong> Graziella Paula P. Martins</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold mb-4 border-b border-blue-200 pb-2"><i class="fas fa-chalkboard mr-2 text-school-blue"></i>Coordenação Pedagógica</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Chelon Cristina Viana Cunha</li>
+                        <li>Cláudia Alemar Santana</li>
+                        <li>Ana Mara Rodrigues</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold mb-4 border-b border-green-200 pb-2"><i class="fas fa-hands-helping mr-2 text-school-green"></i>Serviços Especializados</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><strong>OE (Orientação Educacional):</strong> Lucy Moreira Lores</li>
+                        <li><strong>SEAA:</strong> Aldriana Azevedo e Lisa Carla Magalhães</li>
+                        <li><strong>Sala de Apoio:</strong> Ana Flávia Aderaldo Barbosa Araújo</li>
+                        <li class="italic text-gray-500">Sala de Recursos Generalista: Não se aplica no momento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- História Section -->
+    <section id="historia" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Nossa História... <span class="text-school-blue">62 anos</span></h2>
+                    <div class="space-y-4 text-justify leading-relaxed">
+                        <p>A Escola Classe 19 de Taguatinga foi fundada em <strong>17 de agosto de 1964</strong>. Em 2024, completamos seis décadas de dedicação à educação. Originalmente, o local era um galpão utilizado pelo governo como dormitório para os trabalhadores que construíram Brasília.</p>
+                        <p>Nossa primeira diretora, Professora <strong>Braulina Figueiredo de Lima</strong>, iniciou o processo de alfabetização para os filhos desses trabalhadores. Em 2008, após anos de estrutura precária, iniciou-se o processo de reconstrução, funcionando provisoriamente na EC 21 por cinco anos.</p>
+                        <p>Em <strong>14 de fevereiro de 2013</strong>, inauguramos nossa nova sede. No mesmo ano, implementamos o projeto de <strong>Educação Integral</strong> (10 horas diárias), tornando-nos referência no Distrito Federal.</p>
+                    </div>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-school-blue h-48 rounded-lg flex items-center justify-center text-white p-4 text-center">
+                        <span class="text-xl font-bold italic">Referência em Educação Integral no DF</span>
+                    </div>
+                    <div class="bg-school-green h-48 rounded-lg flex items-center justify-center text-white p-4 text-center">
+                        <span class="text-xl font-bold italic">Desde 1964 educando gerações</span>
+                    </div>
+                    <div class="col-span-2 bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-school-blue mb-2">Comunidade Atual</h4>
+                        <p class="text-sm">Aproximadamente 286 estudantes em 11 turmas. Somos uma escola inclusiva, atendendo estudantes com necessidades especiais (Autismo, Deficiência Física, Visual e Transtornos Funcionais).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Espaços Físicos Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Infraestrutura e Espaços</h2>
+            <div class="grid md:grid-cols-4 gap-4">
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-door-open text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">13 Salas de Aula (incluindo PROEITI e Apoio)</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-flask text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">Laboratórios de Informática, Artes e Ciências</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-book-reader text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">Sala de Leitura e Sala de Múltiplos Usos</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-utensils text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">Refeitório e Cantina/Depósito</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-seedling text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">Horta e Bicicletário</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-running text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">Espaço Coberto para Atividades e Parque Infantil (BIA)</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-shield-alt text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">Guarita, Mecanografia e Estacionamento Interno</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                    <i class="fas fa-chalkboard-teacher text-school-blue mb-2 text-xl"></i>
+                    <p class="text-sm">Salas de Professores, Coordenação e Administração</p>
+                </div>
+            </div>
+
+            <div class="mt-12 p-8 bg-gray-800 rounded-2xl text-white">
+                <h3 class="text-xl font-bold mb-6 text-center">Organização do Estacionamento Interno</h3>
+                <div class="flex flex-col items-center">
+                    <div class="mb-6 border border-gray-600 p-4 rounded bg-gray-900 w-full max-w-lg">
+                        <div class="flex justify-between items-start gap-4">
+                            <!-- Coluna Esquerda -->
+                            <div class="flex flex-col gap-2 border-r border-gray-700 pr-4">
+                                <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-400"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                <div class="parking-car bg-red-600"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-400"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                            </div>
+                            <!-- Fluxo Central -->
+                            <div class="flex-1 flex flex-col items-center justify-center space-y-8">
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-arrow-up text-orange-400 text-xl mb-4"></i>
+                                    <div class="flex gap-4">
+                                        <div class="flex flex-col gap-2">
+                                            <div class="parking-car bg-red-600"><div class="car-window"></div></div>
+                                            <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                            <div class="parking-car bg-gray-400"><div class="car-window"></div></div>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <div class="parking-car bg-gray-400"><div class="car-window"></div></div>
+                                            <div class="parking-car bg-red-600"><div class="car-window"></div></div>
+                                            <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                        </div>
+                                    </div>
+                                    <i class="fas fa-arrow-down text-orange-400 text-xl mt-4"></i>
+                                </div>
+                                <div class="text-orange-400 font-bold uppercase text-[10px] tracking-widest border border-orange-400 p-2 rounded">Entrada e Saída Centralizada</div>
+                            </div>
+                            <!-- Coluna Direita -->
+                            <div class="flex flex-col gap-2 border-l border-gray-700 pl-4">
+                                <div class="parking-car bg-red-600"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-400"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-400"><div class="car-window"></div></div>
+                                <div class="parking-car bg-red-600"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-100"><div class="car-window"></div></div>
+                                <div class="parking-car bg-gray-400"><div class="car-window"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm italic text-gray-400">Diagrama baseado na planta do Manual de Boas-Vindas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROEITI Section -->
+    <section id="pedagogico" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center text-school-blue">PROEITI - Educação Integral</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="font-bold text-xl mb-4 border-b-2 border-school-blue inline-block">Fundamentação e Matriz</h3>
+                    <p class="text-sm mb-4">Baseado no <strong>Parecer 208/2017 - CEDF</strong>. Oferecemos 10 horas diárias (50h semanais) sem interrupções para 100% dos alunos.</p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-school-blue">Base Nacional Comum (25h)</h4>
+                            <p class="text-xs">Português, Ed. Física (Movimento), Arte, Matemática, Ciências, História, Geografia e Ensino Religioso.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-school-green">Parte Flexível (25h)</h4>
+                            <ul class="text-xs list-disc list-inside">
+                                <li>5h Acompanhamento Pedagógico (Port/Mat)</li>
+                                <li>5h Atividades Culturais/Artísticas/Esportivas</li>
+                                <li>5h Formação Pessoal e Social</li>
+                                <li>5h Projeto de Formação de Hábitos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-4 border-b-2 border-school-blue inline-block">Organização Geral</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>As movimentações deverão ser realizadas sempre em fila, acompanhadas pelos professores regentes.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span><strong>Secretaria:</strong> Atestados devem ser lançados no DiárioWeb pelos regentes conforme planilha do Google Sala de Aula.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span><strong>Refeições:</strong> São 4 refeições diárias. Professores acompanham o café e lanches em sala, e o almoço em local designado.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span><strong>Descanso:</strong> Local definido pela gestão. Requer organização de colchonetes e silêncio absoluto.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protocols & Norms -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Protocolos e Normas</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="border rounded-2xl p-6">
+                    <h3 class="font-bold text-xl mb-6 flex items-center"><i class="fas fa-briefcase mr-3 text-school-blue"></i>Administrativo</h3>
+                    <div class="space-y-4">
+                        <p class="text-sm font-bold border-b pb-1">Abonos e TRE</p>
+                        <p class="text-xs text-gray-600">Solicitar via SEI com 3 dias de antecedência. Assinar requerimentos antes do usufruto.</p>
+                        <p class="text-sm font-bold border-b pb-1">Saúde</p>
+                        <p class="text-xs text-gray-600">Até 3 dias/bimestre: direto à chefia. Mais de 3 dias: homologar na SUBSAUDE. Atestado de comparecimento justifica apenas o turno do atendimento.</p>
+                        <p class="text-sm font-bold border-b pb-1">Ponto</p>
+                        <p class="text-xs text-gray-600">Preencher até o 4º dia útil e entregar no administrativo.</p>
+                    </div>
+                </div>
+                <div class="border rounded-2xl p-6">
+                    <h3 class="font-bold text-xl mb-6 flex items-center"><i class="fas fa-clock mr-3 text-school-green"></i>Regência e Convivência</h3>
+                    <div class="space-y-4 text-xs">
+                        <p><strong>Troca de Turno:</strong> Diariamente às 12h30. Pontualidade e troca de informações são essenciais.</p>
+                        <p><strong>Cotas:</strong> Cada ano possui cotas bimestrais de reprografia estipuladas pela supervisão.</p>
+                        <p><strong>Ambientes:</strong> Sala dos professores de uso exclusivo (proibido alunos). Organizar a copinha e computadores após uso.</p>
+                        <p><strong>Comunicação:</strong> Agendas para famílias. WhatsApp "Equipe Mais Top" para postagens gerais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curricular Section -->
+    <section id="curricular" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Planejamento Curricular Integrado 2026</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button onclick="showYear('1ano')" class="year-tab px-4 py-2 font-bold tab-active">1º Ano</button>
+                <button onclick="showYear('2ano')" class="year-tab px-4 py-2 font-bold">2º Ano</button>
+                <button onclick="showYear('3ano')" class="year-tab px-4 py-2 font-bold">3º Ano</button>
+                <button onclick="showYear('4ano')" class="year-tab px-4 py-2 font-bold">4º Ano</button>
+                <button onclick="showYear('5ano')" class="year-tab px-4 py-2 font-bold">5º Ano</button>
+            </div>
+            <div id="curriculum-content" class="bg-white rounded-xl shadow-lg p-6 overflow-x-auto text-left"></div>
+        </div>
+    </section>
+
+    <!-- Calendars Section -->
+    <section id="calendario" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">Cronograma Escolar 2026</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Internal School Calendar -->
+                <div class="bg-blue-900 text-white p-6 rounded-2xl">
+                    <h3 class="text-xl font-bold mb-6 border-b border-blue-700 pb-2">Eventos EC 19</h3>
+                    <div class="space-y-6 overflow-y-auto max-h-[600px] pr-2 custom-scrollbar">
+                        <div>
+                            <h4 class="text-school-green font-bold">1º Bimestre (12/02 a 29/04)</h4>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li>27/02: Reunião de pais (08:00 às 12:00)</li>
+                                <li>14/04: Festa da Família (09:00 às 13:00)</li>
+                                <li>22 a 24/04: Avaliações</li>
+                                <li>27 a 30/04: Conselho de Classe</li>
+                                <li>08/05: Reunião de Pais 1º Bimestre (08:00 às 12:00)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-school-green font-bold">2º Bimestre (30/04 a 10/07)</h4>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li>13/06: Festa Junina - Continentes (10:00 às 14:00)</li>
+                                <li>23 a 25/06: Avaliações</li>
+                                <li>29/06 a 03/07: Conselho de Classe</li>
+                                <li>10/07: Reunião de Pais 2º Bimestre (08:00 às 12:00)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-school-green font-bold">3º Bimestre (27/07 a 05/10)</h4>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li>11/08: Dia do Estudante</li>
+                                <li>22 a 24/09: Avaliações</li>
+                                <li>28/09 a 02/10: Conselho de Classe</li>
+                                <li>05 a 09/10: Jogos Interclasse & Festa das Crianças</li>
+                                <li>23/10: Reunião de Pais 3º Bimestre (08:00 às 12:00)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-school-green font-bold">4º Bimestre (06/10 a 21/12)</h4>
+                            <ul class="text-xs space-y-1 mt-2">
+                                <li>14/11: Feira Cultural (07:30 às 12:30)</li>
+                                <li>22 a 26/11: Avaliações</li>
+                                <li>01/12: Conselho de Classe</li>
+                                <li>07 a 11/12: Soletrando e Conta+</li>
+                                <li>11/12: Formatura 5º Ano (Noturno)</li>
+                                <li>18/12: Reunião de Pais (08:00 às 12:00)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEDF Calendar -->
+                <div class="bg-gray-100 p-6 rounded-2xl border">
+                    <h3 class="text-xl font-bold mb-6 text-gray-800 border-b pb-2">Calendário Anual SEDF 2026</h3>
+                    <div class="bg-white p-4 border rounded shadow-inner text-center">
+                         <div class="grid grid-cols-4 gap-2 text-[10px] mb-4">
+                             <div class="p-1 border bg-blue-50 font-bold">Férias: 08/01-06/02</div>
+                             <div class="p-1 border bg-yellow-50 font-bold">Professores: 09/02</div>
+                             <div class="p-1 border bg-green-50 font-bold">Início Aulas: 12/02</div>
+                             <div class="p-1 border bg-red-50 font-bold">Término: 21/12</div>
+                         </div>
+                         <div class="bg-gray-200 rounded p-6 flex flex-col items-center">
+                            <!-- Visual do Calendário -->
+                            <div class="w-full max-h-48 bg-white border shadow-md rounded-md overflow-hidden mb-4 relative">
+                                <div class="bg-blue-600 h-4 w-full"></div>
+                                <div class="p-2 grid grid-cols-7 gap-1">
+                                    <div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-200"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div>
+                                    <div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-blue-400"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-200"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div>
+                                    <div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div>
+                                    <div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-green-400"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div><div class="h-2 w-full bg-gray-100"></div>
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-5 hover:bg-opacity-0 transition cursor-pointer">
+                                    <i class="far fa-calendar-alt text-4xl text-gray-400 opacity-50"></i>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.educacao.df.gov.br/calendario-escolar/" target="_blank" class="inline-flex items-center gap-2 bg-school-blue text-white px-6 py-3 rounded-full text-xs font-bold shadow-md hover:bg-opacity-90 transition">
+                                <i class="fas fa-external-link-alt"></i> Acessar Calendário SEDF 2026
+                            </a>
+                            <p class="text-xs text-gray-500 mt-4 italic">Portaria nº 1.300 de 28/11/2025. O link abrirá o portal oficial da Secretaria de Educação.</p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contatos Section -->
+    <section id="contatos" class="py-16 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-school-blue">Nossos Contatos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+                    <i class="fas fa-phone-alt text-3xl text-school-blue mb-4"></i>
+                    <h3 class="font-bold mb-2">Telefone</h3>
+                    <p class="text-gray-600">(61) 3901-7573</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+                    <i class="fab fa-whatsapp text-3xl text-school-green mb-4"></i>
+                    <h3 class="font-bold mb-2">WhatsApp Web</h3>
+                    <p class="text-gray-600">3901-7573</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+                    <i class="fas fa-at text-3xl text-orange-400 mb-4"></i>
+                    <h3 class="font-bold mb-2">E-mails Oficiais</h3>
+                    <div class="text-xs space-y-2 text-gray-600">
+                        <p class="break-all">secretaria.ec19tag@edu.se.df.gov.br</p>
+                        <p class="break-all">ec19tagcoordenacao@gmail.com</p>
+                        <p class="break-all">ec19.taguatinga@edu.se.df.gov.br</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <h2 class="font-bold text-2xl leading-none">EC 19 <span class="text-school-blue">Taguatinga</span></h2>
+                    <p class="text-gray-400 text-xs mt-2 uppercase tracking-widest">Educação Integral de Excelência</p>
+                </div>
+                <div class="text-xs text-gray-500 text-center md:text-right">
+                    <p>Taguatinga, Distrito Federal</p>
+                    <p class="mt-2">&copy; 2026 Escola Classe 19 de Taguatinga.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const curriculumData = {
+            '1ano': {
+                title: '1º ANO - Bloco Inicial de Alfabetização',
+                focus: 'Consciência fonológica, letramento inicial, ludicidade e percepção do "Eu".',
+                rows: [
+                    { b: '1º', pt: 'Nome próprio; Alfabeto (topologia); Consciência fonológica; Oralidade e escuta; Orientação da escrita.', mat: 'Funções do número; Contagem de rotina; Calendário; Comparação de coleções.', cn: 'O corpo humano; Respeito à diversidade; Sentidos e percepções.', ch: "O 'Eu' e a família; Regras de convívio; A escola e seus espaços.", art: 'Arte: Ponto, linha e cor. EF: Brincadeiras e jogos populares locais.' },
+                    { b: '2º', pt: 'Relação grafema-fonema; Escrita de listas; Parlendas e rimas; Segmentação de palavras.', mat: 'Números até 50; Sistema de numeração (dezena/unidade); Figuras espaciais.', cn: 'Hábitos de higiene e saúde; Alimentação saudável.', ch: 'Diferentes tipos de família; Organização do tempo escolar.', art: 'Arte: Formas e suportes. EF: Elementos da ginástica geral.' },
+                    { b: '3º', pt: 'Leitura de rótulos e avisos; Produção coletiva de textos; Letra de imprensa e cursiva.', mat: 'Números até 100; Sequências e padrões; Grandezas de comprimento e massa.', cn: 'Escalas de tempo (dia e noite); Fenômenos da natureza.', ch: 'A história da escola; Localização e pontos de referência.', art: 'Arte: Som e silêncio. EF: Danças do contexto regional.' },
+                    { b: '4º', pt: 'Narrativas curtas; Pontuação (final e interrogação); Revisão de textos; Fluência leitora.', mat: 'Adição e subtração (ideias de juntar/retirar); Tabelas simples; Trajetos.', cn: 'Materiais do cotidiano e reciclagem; Consumo consciente.', ch: 'Comemorações e tradições locais; Impacto humano no ambiente.', art: 'Arte: Jogos teatrais. EF: Jogos de oposição e saúde.' }
+                ]
+            },
+            '2ano': {
+                title: '2º ANO - Consolidação da Base Alfabética',
+                focus: 'Autonomia na leitura/escrita e expansão do campo numérico e social.',
+                rows: [
+                    { b: '1º', pt: 'Ordem alfabética; Bilhetes e mensagens; Ortografia (fonemas representados por várias letras).', mat: 'Números até 100; Estimativas e arredondamentos; Adição e subtração.', cn: 'Propriedades física dos materiais; Estados da matéria.', ch: 'A comunidade e seus registros; História do bairro.', art: 'Arte: Cores primárias e secundárias. EF: Brincadeiras de matriz indígena.' },
+                    { b: '2º', pt: 'Tonicidade; Receitas e instruções; Morfologia (substantivos e adjetivos iniciais).', mat: 'Números até 500; Fatos básicos da adição; Figuras geométricas planas.', cn: 'Prevenção de acidentes; Saúde pública e vacinação.', ch: 'Meios de transporte e comunicação; O trabalho local.', art: 'Arte: Desenho e pintura. EF: Esportes de marca e precisão.' },
+                    { b: '3º', pt: 'Contos e fábulas; Concordância nominal; Uso do dicionário; Estrutura da narrativa.', mat: 'Multiplicação (somas sucessivas); Sistema monetário; Medidas de tempo.', cn: 'Seres vivos: plantas e animais; Cadeia alimentar simples.', ch: 'Mudanças e permanências no tempo; Espaços públicos.', art: 'Arte: Instrumentos musicais. EF: Danças circulares e folclore.' },
+                    { b: '4º', pt: 'Produção de textos informativos; Revisão e edição; Pontuação expressiva; Oralidade.', mat: 'Divisão (repartição equitativa); Gráficos de barras; Localização em malhas.', cn: 'O Sol, luz e calor; Movimentos aparentes dos astros.', ch: 'Patrimônio histórico e cultural; Preservação ambiental.', art: 'Arte: Expressão corporal. EF: Ginástica e consciência corporal.' }
+                ]
+            },
+            '3ano': {
+                title: '3º ANO - Ampliação da Competência Linguística',
+                focus: 'Fechamento do bloco de alfabetização e algoritmos matemáticos formais.',
+                rows: [
+                    { b: '1º', pt: 'Ortografia complexa; Paragrafação; Notícias e relatos de experiências; Verbos de ação.', mat: 'Números até 1.000; Valor posicional; Propriedades da adição e subtração.', cn: 'Água e solo: características e usos; Ciclo da água.', ch: 'Surgimento das cidades; A história de Brasília e do DF.', art: 'Arte: Texturas e bidimensionalidade. EF: Jogos de tabuleiro tradicionais.' },
+                    { b: '2º', pt: 'Cartas e e-mails; Adjetivos e caracterização; Poemas (ritmo e rima); Coesão.', mat: 'Multiplicação (algoritmo formal); Sólidos geométricos; Composição.', cn: 'Som e luz: fontes e propriedades; Audição e visão.', ch: 'Grupos sociais e o campo/cidade; Relações de trabalho.', art: 'Arte: Escultura e modelagem. EF: Atletismo e coordenação motora.' },
+                    { b: '3º', pt: 'Pronomes e coesão textual; Diários e memórias; Prefixos e sufixos; Pesquisa documental.', mat: 'Divisão (algoritmo formal); Frações iniciais; Medidas de massa e capacidade.', cn: 'Ciclo de vida dos seres vivos; Classificação de animais.', ch: 'Patrimônio imaterial; Cartografia: plantas e maquetes.', art: 'Arte: Dramatização de histórias. EF: Danças de matriz africana.' },
+                    { b: '4º', pt: 'Textos publicitários; Sinônimos e antônimos; Debate e opinião; Revisão autônoma.', mat: 'Números até 10.000; Área e perímetro (noções); Probabilidade e estatística.', cn: 'Vertebrados e invertebrados; Ameaças à biodiversidade local.', ch: 'Problemas urbanos e cidadania; Marcos históricos do DF.', art: 'Arte: Criação sonora e voz. EF: Ginástica rítmica e artística.' }
+                ]
+            },
+            '4ano': {
+                title: '4º ANO - Letramento Científico e Crítico',
+                focus: 'Morfossintaxe, números decimais e formação da sociedade brasileira.',
+                rows: [
+                    { b: '1º', pt: 'Acentuação; Flexão de gênero e número; Entrevistas e reportagens; Coesão verbal.', mat: 'Números naturais (grandes quantidades); Operações e suas propriedades.', cn: 'Misturas e transformações reversíveis e irreversíveis.', ch: 'Brasil colonial e as grandes navegações; Território do DF.', art: 'Arte: Matrizes estéticas e culturais. EF: Iniciação ao voleibol e futsal.' },
+                    { b: '2º', pt: 'Tipos de substantivos; Infográficos; Estrutura de parágrafos científicos; Sumários.', mat: 'Números racionais (forma decimal); Ângulos e simetria; Localização.', cn: 'Microrganismos: fungos, bactérias e vírus; Doenças e vacinas.', ch: 'Processos migratórios no Brasil e no DF; Unidades de conservação.', art: 'Arte: Teoria das cores (quentes/frias). EF: Esportes de invasão.' },
+                    { b: '3º', pt: 'Tempos e modos verbais; Crônicas e mitos; Discurso direto e indireto; Vocativo.', mat: 'Frações (equivalência e comparação); Medidas de tempo (séculos).', cn: 'Cadeia alimentar e fluxo de energia; Ecossistemas do cerrado.', ch: 'Setores da economia; Relações de poder e lutas sociais.', art: 'Arte: Elementos do teatro (luz/som). EF: Lutas e jogos de oposição.' },
+                    { b: '4º', pt: 'Concordância nominal/verbal; Textos de opinião; Seminários; Uso de conjunções.', mat: 'Área e Perímetro; Polígonos; Porcentagem (25%, 50%, 100%); Gráficos.', cn: 'Movimentos Terra/Lua; Fases da lua e eclipses.', ch: 'Cidadania e direitos humanos; Tecnologia e o mundo do trabalho.', art: 'Arte: Arte digital e animação. EF: Práticas de aventura (trilhas).' }
+                ]
+            },
+            '5ano': {
+                title: '5º ANO - Transição e Autonomia',
+                focus: 'Análise linguística complexa, sistemas do corpo e formação política.',
+                rows: [
+                    { b: '1º', pt: 'Proparoxítonas; Pronomes relativos; Artigo de opinião; Editoriais; Nexos lógicos.', mat: 'Números decimais (operações); Porcentagem e juros simples (noção).', cn: 'Propriedades físicas dos materiais (condutividade, magnetismo).', ch: 'A República no Brasil; Organização do Estado e Democracia.', art: 'Arte: Modernismo e arte contemporânea. EF: Ginástica de condicionamento.' },
+                    { b: '2º', pt: 'Verbos regulares/irregulares; Resenhas; Ironia e humor; Figuras de linguagem.', mat: 'Frações (operações básicas); Cálculo de área; Volume (noção de m³).', cn: 'Nutrição e sistema digestório; Sistema respiratório e circulatório.', ch: 'Ditadura e redemocratização; Movimentos sociais no Brasil.', art: 'Arte: Dramaturgia e improvisação. EF: Esportes de rede e parede.' },
+                    { b: '3º', pt: 'Advérbios; Intertextualidade; Texto dramático e poesia; Análise de ambiguidades.', mat: 'Plano Cartesiano; Ampliação e redução de figuras; Unidades de medida.', cn: 'Sistema nervoso e sentidos; Saúde mental e reprodutiva.', ch: 'O Brasil no cenário mundial; Biomas e sustentabilidade.', art: 'Arte: Danças urbanas e videodança. EF: Lutas do mundo e ética.' },
+                    { b: '4º', pt: 'Produção literária complexa; Debate regrado; Crítica midiática; Revisão estilística.', mat: 'Médias estatísticas; Experimentos aleatórios; Gráficos de setores.', cn: 'O sistema solar e o universo; Evolução tecnológica e exploração.', ch: 'Direitos Humanos e ética na rede; Projetos de cidadania.', art: 'Arte: Instalação e performance. EF: Práticas de aventura urbana.' }
+                ]
+            }
+        };
+
+        function showYear(year) {
+            const data = curriculumData[year];
+            const tabs = document.querySelectorAll('.year-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('tab-active');
+                if(tab.innerText.toLowerCase().includes(year.replace('ano', ''))) tab.classList.add('tab-active');
+            });
+
+            let html = `
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-school-blue">${data.title}</h3>
+                    <p class="text-sm text-gray-500 italic">Foco: ${data.focus}</p>
+                </div>
+                <table class="w-full text-xs border-collapse">
+                    <thead>
+                        <tr class="bg-gray-100 text-left">
+                            <th class="p-3 border">Bim.</th>
+                            <th class="p-3 border">Língua Portuguesa</th>
+                            <th class="p-3 border">Matemática</th>
+                            <th class="p-3 border">C. Naturais</th>
+                            <th class="p-3 border">C. Humanas</th>
+                            <th class="p-3 border">Arte e Ed. Física</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${data.rows.map(r => `
+                            <tr>
+                                <td class="p-3 border font-bold bg-gray-50 text-center">${r.b}</td>
+                                <td class="p-3 border">${r.pt}</td>
+                                <td class="p-3 border">${r.mat}</td>
+                                <td class="p-3 border">${r.cn}</td>
+                                <td class="p-3 border">${r.ch}</td>
+                                <td class="p-3 border">${r.art}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+            document.getElementById('curriculum-content').innerHTML = html;
+        }
+
+        window.onload = () => showYear('1ano');
+    </script>
+</body>
+</html>
